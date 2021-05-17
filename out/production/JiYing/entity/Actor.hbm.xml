@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.Actor" table="actor" schema="jiying">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <set name="movies" table="movie_actor" inverse="true" lazy="false">
+            <!-- 当前方在中间表的外键 -->
+            <key column="actor_id"/>
+            <!-- column:对方在中间表的外键 -->
+            <many-to-many class="entity.Movie" column="movie_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

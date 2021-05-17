@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+   <package name="jiying" extends="struts-default">
+       <action name="login" class="action.LoginAction">
+             <result name="error">/Login.jsp</result>
+             <result name="success">/Main.jsp</result>
+       </action>
+       <action name="main" class="action.MainAction">
+           <result name="error">/Main.jsp</result>
+           <result name="success">/Main.jsp</result>
+       </action>
+       <action name="showMovie" class="action.ShowMovie">
+           <result name="error">/addresslist.jsp</result>
+           <result name="success">/addresslist.jsp</result>
+       </action>
+       <action name="addMovie" class="action.AddMovie">
+           <result name="error">/index.jsp</result>
+           <result name="success">/carousel/index.jsp</result>
+       </action>
+       <action name="loadMovie" class="action.LoadMovie">
+           <result name="error">/OneMovie.jsp</result>
+           <result name="success">/OneMovie.jsp</result>
+       </action>
+       <action name="deleteMovie" class="action.DeleteAction">
+           <result name="error">Delete.jsp</result>
+           <result name="success">Delete.jsp</result>
+       </action>
+   </package>
+</struts>

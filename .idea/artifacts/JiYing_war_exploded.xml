@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JiYing:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JiYing_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JiYing/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JiYing" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2" />
+          <element id="library" level="project" name="Spring" />
+          <element id="library" level="project" name="Hibernate" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../java开发/SSH框架常用jar包/mysql/mysql-connector-java-5.1.13-bin.jar" />
+          <element id="library" level="module" name="JUnit4" module-name="JiYing" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
